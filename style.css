@@ -4,7 +4,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Space Mono";
-  transition: all .5s ease;
+  transition: all 0.5s ease;
 }
 body {
   width: 100vw;
@@ -15,7 +15,7 @@ body {
   justify-content: start;
   flex-direction: column;
 }
-.mainMobileImg{
+.mainMobileImg {
   display: none;
 }
 .logo h2 {
@@ -30,11 +30,10 @@ body {
 header {
   padding-top: 50px;
 }
-.mode:hover{
+.mode:hover {
   box-shadow: 0px 0px 10px gray;
 }
 nav .container {
-
   width: 730px;
   display: flex;
   align-items: center;
@@ -61,7 +60,6 @@ nav .container {
   background-color: #1e2a47;
   border-radius: 8px;
   box-shadow: 0px 16px 30px -10px #4660bb33;
-
 }
 .dark .hero {
   background-color: #fefefe;
@@ -86,7 +84,7 @@ nav .container {
   outline: none;
   color: white;
 }
-.dark .inputData input{
+.dark .inputData input {
   color: #141d2f;
 }
 .searchBtn {
@@ -102,8 +100,7 @@ nav .container {
 }
 main {
   padding-top: 24px;
-  box-shadow: 0px 16px 30px -10px #4660BB33;
-
+  box-shadow: 0px 16px 30px -10px #4660bb33;
 }
 .dark main .container {
   background-color: #fefefe;
@@ -213,8 +210,8 @@ main .container {
   align-items: center;
   justify-content: space-between;
 }
-.dark .username{
-  color: #0079FF;
+.dark .username {
+  color: #0079ff;
 }
 .userData .url {
   display: flex;
@@ -225,20 +222,19 @@ main .container {
 .col p {
   padding-bottom: 19px;
 }
-.dark .col a{
-  color: #4B6A9B;
+.dark .col a {
+  color: #4b6a9b;
 }
 .col a {
   text-decoration: none;
   color: white;
 }
 
-
-@media (max-width: 480px){
-  body{
+@media (max-width: 573px) {
+  body {
     padding: 15px 20px;
   }
-  header{
+  header {
     padding-top: 0;
   }
   nav .container {
@@ -249,6 +245,13 @@ main .container {
     background-color: transparent;
     padding-bottom: 35px;
   }
+  .hero {
+    width: 500px;
+  }
+  .hero form {
+    padding: 9.5px 10px;
+    width: 100%;
+  }
   .inputData input {
     border: none;
     background-color: transparent;
@@ -256,34 +259,50 @@ main .container {
     outline: none;
     color: white;
   }
-  main{
-    padding: 30px 20px;
+  main {
+    width: 500px;
   }
   main .container {
-    background-color: #1e2a47;
     width: 100%;
+    background-color: #1e2a47;
     display: flex;
-    padding: 48px;
     border-radius: 15px;
     justify-content: start;
+    padding: 30px;
     gap: 37px;
   }
-  .title{
+  .title {
     flex-direction: column;
     justify-content: start;
-
+    align-items: start;
   }
-  
-  .headPart{
+  .headPart {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 40px;
+    padding-bottom: 24px;
+  }
+  .headData {
     display: flex;
     align-items: start;
-    justify-content: space-between;
-
+    justify-content: start;
+    flex-direction: column;
   }
-  .mainImg{
+  .name {
+    padding-bottom: 5px;
+  }
+  .date {
+    padding-bottom: 5px;
+  }
+  .bio {
+    padding-bottom: 32px;
+    font-size: 14px;
+  }
+  .mainImg {
     display: none;
   }
-  .mainMobileImg{
+  .mainMobileImg {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -292,7 +311,124 @@ main .container {
     border-radius: 50%;
     overflow: hidden;
   }
-  .mainMobileImg img{
+  .mainMobileImg img {
     width: 100%;
+  }
+  .url{
+    font-size: 14px;
+  }
+}
+@media (max-width: 480px) {
+  body {
+    padding: 15px 20px;
+  }
+  header {
+    padding-top: 0;
+  }
+  nav .container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
+    padding-bottom: 35px;
+  }
+  .hero {
+    width: 400px;
+  }
+  .hero form {
+    padding: 9.5px 10px;
+    width: 100%;
+  }
+  .inputData input {
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    outline: none;
+    color: white;
+    font-size: 15px;
+  }
+  .inputData input::placeholder{
+    font-size: 13px;
+  }
+  .searchBtn{
+    height: 40px;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 0px 15px;
+  }
+  main {
+    width: 400px;
+  }
+  main .container {
+    width: 100%;
+    background-color: #1e2a47;
+    display: flex;
+    border-radius: 15px;
+    justify-content: start;
+    padding: 30px;
+    gap: 37px;
+  }
+  .title {
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+  }
+  .headPart {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 30px;
+    padding-bottom: 24px;
+  }
+  .headData {
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+  }
+  .name {
+    padding-bottom: 0px;
+    font-size: 16px;
+  }
+  .date {
+    padding-bottom: 5px;
+  }
+  .bio {
+    padding-bottom: 20px;
+    font-size: 13px;
+  }
+  .username{
+    font-size: 13px;
+    padding-bottom: 0;
+  }
+  .mainImg {
+    display: none;
+  }
+  .mainMobileImg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  .mainMobileImg img {
+    width: 100%;
+  }
+  .profile{
+    margin-bottom: 20px;
+  }
+  .url{
+    font-size: 14px;
+  }
+  .userData {
+    width: 100%;
+    color: white;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
   }
 }
